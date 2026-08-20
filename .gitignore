@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local captures and transient exports (the submitted evidence capture is explicitly retained)
+*.pcap
+*.cap
+*.ps
+*.log
+
+# Local temp / generated
+build/
+dist/
+*.egg-info/

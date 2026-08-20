@@ -1,0 +1,25 @@
+name: Repository Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax-and-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile canonical Python sources
+        run: python -m compileall -q src
+      - name: Check required text-side repository structure
+        run: |
+          test -f README.md
+          test -f docs/PHASE_1.md
+          test -f docs/PHASE_2.md
+          test -f configs/routeros/igmp-proxy.rsc
+          test -f configs/routeros/pim-sm.rsc

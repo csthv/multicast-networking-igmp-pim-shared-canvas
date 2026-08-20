@@ -1,0 +1,15 @@
+# Phase 2 - IGMP Proxy mode
+# Upstream->Downstream is multicast. Downstream hosts use --peer-unicast for the return direction.
+
+# PC1 / Upstream
+py src\phase2\mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.1.10 --user "Up"
+
+# PC2 / Downstream
+py src\phase2\mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.2.10 --user "Down-1" --peer-unicast --igmp
+
+# PC3 / Downstream
+py src\phase2\mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.2.11 --user "Down-2" --peer-unicast --igmp
+
+# RouterOS live traffic observation (run separately on each interface as needed):
+# /tool torch interface=ether1 port=5000
+# /tool torch interface=ether2 port=5000

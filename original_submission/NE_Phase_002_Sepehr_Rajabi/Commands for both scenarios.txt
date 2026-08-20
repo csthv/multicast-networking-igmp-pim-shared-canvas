@@ -1,0 +1,18 @@
+Pims commands:
+
+py mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.1.10 --user "Up" --igmp
+
+py mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.2.10 --user "Down-1" --igmp
+
+py mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.2.11 --user "Down-2" --igmp
+
+
+Igmp proxy commands:
+
+python mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.1.10 
+
+python mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.2.10 --peer-unicast --igmp 
+
+python mcast_canvas.py --group 239.1.1.1 --port 5000 --ttl 16 --ifaddr 10.0.2.11 --peer-unicast --igmp 
+
+/tool torch interface=ether2 port=5000

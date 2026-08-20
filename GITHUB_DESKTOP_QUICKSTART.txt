@@ -1,0 +1,26 @@
+GITHUB DESKTOP QUICK START — NO GIT LFS
+========================================
+
+1. Extract the complete ZIP. Do not move individual files out of the project folder.
+2. Install GitHub Desktop and sign in to your GitHub account.
+3. In GitHub Desktop, select: File -> Add Local Repository...
+4. Choose the extracted Network_Multicast_Two_Phase_Project folder and click Add Repository.
+5. Review the Changes list. The complete original submission, code, reports, evidence, images, video, and documentation should be present.
+6. In Summary, enter:
+   Initial academic release: two-stage multicast networking project
+   Then click: Commit to main
+7. Click: Publish repository
+   Suggested repository name:
+   multicast-networking-igmp-pim-shared-canvas
+   Suggested description:
+   Two-stage GNS3/RouterOS multicast project: IGMP Proxy, Scapy validation, PIM-SM, and a shared UDP multicast canvas.
+8. Keep the repository Private initially unless you have reviewed the original reports/video/capture for identifiers you do not want public.
+9. After publishing, choose Repository -> View on GitHub and verify README, src/, docs/, images, PDFs, PCAPNG, and NE_Video.mp4.
+
+IMPORTANT LARGE-FILE NOTE
+-------------------------
+The original NE_Video.mp4 is 56,326,921 bytes (~53.7 MiB). GitHub may warn for a normal Git file above 50 MiB, but the current hard per-file limit is 100 MiB. This package intentionally does NOT use Git LFS.
+
+FULL GUIDE
+----------
+See: docs/GITHUB_UPLOAD_GUIDE.md

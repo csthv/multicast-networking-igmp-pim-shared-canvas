@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Two-Stage IP Multicast Networking Project: IGMP Proxy, PIM-SM, and a Shared Multicast Canvas"
+message: "If this academic project is reused, please cite the repository and its authors."
+type: software
+authors:
+  - family-names: Rajabi
+    given-names: Sepehr
+  - family-names: Bagheri
+    given-names: Sana
+version: 1.0.0
+keywords:
+  - multicast
+  - IGMP
+  - IGMP Proxy
+  - PIM-SM
+  - GNS3
+  - MikroTik RouterOS
+  - Scapy
+  - Wireshark
+  - computer networks

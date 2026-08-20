@@ -1,0 +1,16 @@
+# Phase 1 - Scapy multicast sender / receivers
+# Run from the repository root on the corresponding Windows VMs.
+# Npcap + Scapy are required. Run an elevated terminal if raw-packet access requires it.
+
+# PC1 / Upstream (10.0.1.10)
+py src\phase1\sender.py --src-ip 10.0.1.10 --group 239.1.1.1 --port 5000 --ttl 16 --interval 2
+
+# PC2 / Downstream receiver 1 (10.0.2.10)
+py src\phase1\receiver.py --src-ip 10.0.2.10 --group 239.1.1.1 --port 5000 --join-interval 10
+
+# PC3 / Downstream receiver 2 (10.0.2.11)
+py src\phase1\receiver.py --src-ip 10.0.2.11 --group 239.1.1.1 --port 5000 --join-interval 10
+
+# If interface auto-selection is wrong:
+py src\phase1\sender.py --list-ifaces
+py src\phase1\receiver.py --list-ifaces

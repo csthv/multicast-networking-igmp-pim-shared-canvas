@@ -1,0 +1,17 @@
+# Binary academic evidence is stored as ordinary Git objects.
+# This repository intentionally does NOT use Git LFS.
+*.mp4 -text -diff
+*.pcapng -text -diff
+*.pdf -text -diff
+*.png -text -diff
+*.jpg -text -diff
+*.jpeg -text -diff
+
+# Text normalization
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.rsc text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cff text eol=lf

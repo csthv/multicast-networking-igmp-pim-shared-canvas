@@ -1,0 +1,3 @@
+# Phase 1 requires Scapy. Phase 2 requires it only when --igmp is enabled,
+# but installing it keeps the full project feature set available.
+scapy>=2.5.0,<3.0
